@@ -1,3 +1,4 @@
+// === MENÚ Y BUSCADOR ===
 const menuIcon = document.getElementById("menu-icon");
 const slideoutMenu = document.getElementById("slideout-menu");
 const searchIcon = document.getElementById("search-icon");
@@ -21,8 +22,10 @@ menuIcon.addEventListener('click', function () {
     slideoutMenu.style.opacity = '1';
     slideoutMenu.style.pointerEvents = 'auto';
   }
-})
+});
 
+
+// === CARRUSEL ===
 function setupCarousel(carouselContainer) {
   const slide = carouselContainer.querySelector('.carousel-slide');
   const images = carouselContainer.querySelectorAll('.carousel-slide img');
@@ -56,7 +59,6 @@ function setupCarousel(carouselContainer) {
     clearInterval(interval);
   }
 
-  // Eventos de los indicadores
   indicators.forEach((indicator, idx) => {
     indicator.addEventListener('click', () => {
       currentIndex = idx;
@@ -66,7 +68,6 @@ function setupCarousel(carouselContainer) {
     });
   });
 
-  // Eventos de deslizamiento (touch + mouse)
   slide.addEventListener('mousedown', (e) => {
     startX = e.pageX;
     isDragging = true;
@@ -97,7 +98,6 @@ function setupCarousel(carouselContainer) {
     }
   });
 
-  // Touch
   slide.addEventListener('touchstart', (e) => {
     startX = e.touches[0].pageX;
     isDragging = true;
@@ -124,6 +124,20 @@ function setupCarousel(carouselContainer) {
   startCarousel();
 }
 
-// Inicializa todos los carousels en la página
 document.querySelectorAll('.carousel-container').forEach(setupCarousel);
 
+
+// === SCROLL SUAVE PARA ANCLAS ===
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      e.preventDefault();
+      window.scrollTo({
+        top: targetElement.offsetTop - 60, // Ajuste por navbar
+        behavior: 'smooth'
+      });
+    }
+  });
+});
