@@ -6,15 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Seguros y Asistencia al Viajero | Seguro de Mala Praxis</title>
 
-  <!-- Meta descripción optimizada para SEO -->
+  <!-- Meta SEO -->
   <meta name="description" content="Contratá tu seguro de mala praxis, seguros integrales y asistencia al viajero con cobertura internacional. Protección confiable y rápida, adaptada a tus necesidades.">
-
-  <!-- Palabras clave para SEO -->
   <meta name="keywords" content="seguro de mala praxis, seguros, asistencia al viajero, seguros médicos, seguros profesionales, cobertura internacional, seguros online">
-
-  <!-- Canonical -->
   <link rel="canonical" href="https://www.macrosuma.com.ar/">
 
+  <!-- Fuentes e iconos -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -22,219 +19,195 @@
 </head>
 <body>
 
-<!--Navbar-->
-<body>
-    <div id="slideout-menu">
-        <ul>
-            <li>
-                <a href="index.html">Inicio</a>
-            </li>
-            <li class="dropdown">
-                <a href="blogslist.html" class="dropbtn">Servicios <i class="fas fa-caret-down"></i></a>
-                <ul class="dropdown-content">
-                    <li><a href="blogslist.html#otrosseguros">Asistencia al Viajero</a></li>
-                    <li><a href="blogslist.html">Seguros de Mala Praxis</a></li>
-                    <li><a href="blogslist.html#otrosseguros">Otros Seguros</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#section-source">Nosotros</a>
-            </li>
-            <li>
-                <a href="#contact-section">Contacto</a>
-            </li>
+<!-- Botón hamburguesa y overlay -->
+<div class="hamburger" onclick="toggleSidebar()">&#9776;</div>
+<div class="overlay" onclick="toggleSidebar()"></div>
 
-        </ul>
-    </div>
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <a href="index.html"><img src="img/logo.png" alt="Macrosuma Logo"></a>
+  </div>
+  <a href="index.html" class="active">Inicio</a>
+  <a href="##">Seguros de Mala Praxis</a>
+  <a href="blogslist.html">Médicos/ Salud</a>
+   <a href="blogslist.html">Abogados</a>
+  <a href="blogslist.html">Contadores</a>
+  <a href="blogslist.html">Escribanos</a>
+  <a href="blogslist.html">Arquitectos</a>
+    <a href="blogslist.html">Ingenieros</a>
+    <a href="blogslist.html">Directores y Gerentes</a>
+     <a href="blogslist.html">Instituciones</a>
+  <a href="##">Otros Seguros</a>
+  <a href="blogslist.html">Asistencia al Viajero</a>
+  <a href="blogslist.html">Responsabilidad Civil</a>
+  <a href="blogslist.html">Caución</a>
+  <a href="blogslist.html">Empresas</a>
+  <a href="blogslist.html">Comercios</a>
+  <a href="blogslist.html">Vida</a>
+  <a href="blogslist.html">Accidentes Personales</a>
+  <a href="blogslist.html">Hogar</a>
+  <a href="blogslist.html">Automóvil</a>
+  <a href="#section-source">Nosotros</a>
+  <a href="#contact-section">Contacto</a>
+</aside>
 
-    <nav>
-    <div id="logo-img">
-        <a href="#">
-            <img src="img/logo.png" alt="Macrosuma Logo">
-        </a>
-    </div>
-    <div id="menu-icon">
-        <i class="fas fa-bars"></i>
-    </div>
-    <ul>
-        <li>
-            <a class="active" href="index.html">Inicio</a>
-        </li>
-        <li class="dropdown">
-            <a href="blogslist.html" class="dropbtn">Servicios <i class="fas fa-caret-down"></i></a>
-            <ul class="dropdown-content">
-                <li><a href="blogslist.html#otrosseguros">Asistencia al Viajero</a></li>
-                    <li><a href="blogslist.html">Seguros de Mala Praxis</a></li>
-                    <li><a href="blogslist.html#otrosseguros">Otros Seguros</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="#section-source">Nosotros</a>
-        </li>
-        <li>
-            <a href="#contact-section">Contacto</a>
-        </li>
-        <li>
-            <div id="search-icon">
-            
-            </div>
-        </li>
-    </ul>
-</nav>
+<!-- Contenido principal -->
+<main>
 
-    <div id="searchbox">
-        <input type="text" placeholder="buscar Aquí">
-    </div>
-
-<!--Banner-->
-    <div id="banner">
-        <h1>MACROSUMA</h1>
-        <h3>Asesores integrales de seguros</h3>
-    </div>
+  <!-- Banner -->
+  <section id="banner">
+    <h1>MACROSUMA</h1>
+    <h3>Asesores integrales de seguros</h3>
+  </section>
 
 <!-- Seguros de mala praxis -->
-<a href="blogslist.html">
-  <h2 class="section-heading">Seguros de Mala Praxis</h2>
-</a>
 
+    <h2 class="section-heading">Seguros de Mala Praxis</h2>
 <section>
-  <div class="card">
-    <div class="card-image">
-      <a href="medicos.html">
-        <img src="img/medicos.jpg" alt="Seguro de mala praxis para médicos">
-      </a>
-    </div>
-    <div class="card-description">
-      <a href="medicos.html">
+ <div class="cards-container">
+    <div class="card">
+      <div class="card-image">
+        <a href="medicos.html">
+          <img src="img/medicos.jpg" alt="Seguro de mala praxis para médicos">
+        </a>
+      </div>
+      <div class="card-description">
         <h3>Para Médicos</h3>
-      </a>
-      <p>Protegé tu carrera profesional ante demandas judiciales. Cobertura completa y asesoramiento especializado.</p>
-      <a href="medicos.html" class="btn-readmore">Solicitar información</a>
+        <p>Protegé tu carrera profesional ante demandas judiciales. Cobertura completa y asesoramiento especializado.</p>
+        <a href="medicos.html" class="btn-readmore">Solicitar información</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-image">
+        <a href="abogados.html">
+          <img src="img/abogado.jpg" alt="Seguro de mala praxis para abogados">
+        </a>
+      </div>
+      <div class="card-description">
+        <h3>Para Abogados</h3>
+        <p>Defendé tu ejercicio profesional frente a reclamos. Planes flexibles y respaldo legal inmediato.</p>
+        <a href="abogados.html" class="btn-readmore">Solicitar información</a>
+      </div>
+    </div>
+     <div class="card">
+      <div class="card-image">
+        <a href="medicos.html">
+          <img src="img/medicos.jpg" alt="Seguro de mala praxis para médicos">
+        </a>
+      </div>
+      <div class="card-description">
+        <h3>Para Médicos</h3>
+        <p>Protegé tu carrera profesional ante demandas judiciales. Cobertura completa y asesoramiento especializado.</p>
+        <a href="medicos.html" class="btn-readmore">Solicitar información</a>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-image">
-      <a href="abogados.html">
-        <img src="img/abogado.jpg" alt="Seguro de mala praxis para abogados">
-      </a>
-    </div>
-    <div class="card-description">
-      <a href="abogados.html">
-        <h3>Para Abogados</h3>
-      </a>
-      <p>Defendé tu ejercicio profesional frente a reclamos. Planes flexibles y respaldo legal inmediato.</p>
-      <a href="abogados.html" class="btn-readmore">Solicitar información</a>
-    </div>
-  </div>
 </section>
 
+  <!-- Otros seguros -->
+      <h2 class="section-heading">Otros Seguros</h2>
+      <section>
+    <div class="carousel-container">
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="img/viaje.jpg" alt="Seguro de asistencia al viajero">
+          <div class="carousel-caption">
+            <h3>Asistencia al Viajero</h3>
+            <p>Protección en todo el mundo</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/hogar.jpg" alt="Seguro de hogar">
+          <div class="carousel-caption">
+            <h3>Seguro de Hogar</h3>
+            <p>Tranquilidad para tu familia</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/auto.jpg" alt="Seguro automotor">
+          <div class="carousel-caption">
+            <h3>Seguro Automotor</h3>
+            <p>Cuidamos tu camino</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/comercio.jpg" alt="Seguro para comercios">
+          <div class="carousel-caption">
+            <h3>Seguro de Comercio</h3>
+            <p>Protección para tu negocio</p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+    </div>
+  </section>
 
-<!-- Otros seguros -->
-<a href="blogslist.html">
-  <h2 class="section-heading">Otros Seguros</h2>
-</a>
-<section>
+  <!-- Nosotros -->
+  
+    <h2 class="section-heading">Nosotros</h2>
+    <section id="section-source"></section>
+    <p><strong>Más de 25 años de experiencia</strong> asesorando y comercializando seguros de personas, patrimoniales y asistencia al viajero.</p>
+    <p>Trabajamos con <strong>compañías de primer nivel</strong> evaluadas por las principales calificadoras de riesgo, garantizando respaldo y confianza.</p>
+    <p>En los últimos años, la demanda de <strong>seguros de Responsabilidad Civil y Mala Praxis</strong> se ha incrementado notablemente, abarcando múltiples profesiones.</p>
+    <a href="#" class="btn-readmore">Trabajamos con las siguientes aseguradoras</a>
+  </section>
+
+  <!-- Logos -->
   <div class="carousel-container">
     <div class="carousel-slide">
-
-      <div class="carousel-item">
-        <img src="img/viaje.jpg" alt="Seguro de asistencia al viajero">
-        <div class="carousel-caption">
-          <h3>Asistencia al Viajero</h3>
-          <p>Protección en todo el mundo</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/hogar.jpg" alt="Seguro de hogar">
-        <div class="carousel-caption">
-          <h3>Seguro de Hogar</h3>
-          <p>Tranquilidad para tu familia</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/auto.jpg" alt="Seguro automotor">
-        <div class="carousel-caption">
-          <h3>Seguro Automotor</h3>
-          <p>Cuidamos tu camino</p>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-        <img src="img/comercio.jpg" alt="Seguro para comercios">
-        <div class="carousel-caption">
-          <h3>Seguro de Comercio</h3>
-          <p>Protección para tu negocio</p>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="carousel-indicators">
-      <span class="indicator active"></span>
-      <span class="indicator"></span>
-      <span class="indicator"></span>
-      <span class="indicator"></span>
+      <img src="img/Captura.JPG" alt="Federación Patronal">
+      <img src="img/ART---Azul---Prevención-de-Riesgos_600px.png" alt="Federación Patronal ART">
+      <img src="img/ca0a8bb6-f5f4-403e-8850-bd81d42d052f.jpg" alt="Coris">
+      <img src="img/prudencia.JPG" alt="Prudencia">
     </div>
   </div>
-</section>
 
-<!-- Nosotros -->
-  <section id="section-source">
-<h2 class="section-heading">Nosotros</h2>
-  <p><strong>Más de 25 años de experiencia</strong> asesorando y comercializando seguros de personas, patrimoniales y asistencia al viajero.</p>
-  <p>Trabajamos con <strong>compañías de primer nivel</strong> evaluadas por las principales calificadoras de riesgo, garantizando respaldo y confianza.</p>
-  <p>En los últimos años, la demanda de <strong>seguros de Responsabilidad Civil y Mala Praxis</strong> se ha incrementado notablemente, abarcando múltiples profesiones.</p>
-  <a href="#" class="btn-readmore">Trabajamos con los siguientes seguros</a>
-</section>
-            
-        <!-- Carousel2 -->
-<div class="carousel-container">
-  <div class="carousel-slide">
-    <img src="img/Captura.JPG" alt="Federación Patronal">
-    <img src="img/ART---Azul---Prevención-de-Riesgos_600px.png" alt="Federación Patronal ART">
-    <img src="img/ca0a8bb6-f5f4-403e-8850-bd81d42d052f.jpg" alt="Coris">
-    <img src="img/prudencia.JPG" alt="Project 4">
-  </div>
-  <div class="carousel-indicators">
-    <span class="indicator active"></span>
-    <span class="indicator"></span>
-    <span class="indicator"></span>
-    <span class="indicator"></span>
-  </div>
-</div>
+  <!-- Contacto -->
+  
+    <h2 class="section-heading">Contacto</h2>
+    <section id="contact-section">
+    <h4>Contáctenos para solicitar un seguro o para efectuar consultas</h4>
+    <form action="https://formsubmit.co/info@macrosuma.com.ar" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
+      <input type="text" name="telefono" placeholder="Teléfono" required>
+      <input type="text" name="provincia" placeholder="Provincia" required>
+      <textarea name="message" placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-        <!-- Formulario de contacto -->
-<section id="contact-section">
-  <h2 class="section-heading">Contacto</h2><h4>Contáctenos para solicitar un seguro o para efectuar consultas</h><br>
-  <form action="https://formsubmit.co/info@macrosuma.com.ar" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Nombre" required>
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-    <input type="numbrer" name="telefono" placeholder="Teléfono" required>
-    <input type="text" name="provincia" placeholder="Provincia" required>
-    <textarea name="message" placeholder="Mensaje" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-</section>
-
-       <!-- Footer  -->
-<footer class="custom-footer">
-  <div class="footer-content">
-    <div class="footer-social">
-      <a href="##" target="_blank" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
-      <a href="##" target="_blank" aria-label="Facebook"><i class="ri-facebook-box-line"></i></a>
-      <a href="##" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+  <!-- Footer -->
+  <footer class="custom-footer">
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="##" target="_blank" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="##" target="_blank" aria-label="Facebook"><i class="ri-facebook-box-line"></i></a>
+        <a href="##" target="_blank" aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></a>
+      </div>
+      <div class="footer-mail">
+        info@macrosuma.com.ar
+      </div>
     </div>
-    <div class="footer-mail">
-      info@macrosuma.com.ar
-    </div>
-  </div>
-</footer>
+  </footer>
 
-    </main>
-    <!--javascript-->
-    <script src="script.js"></script>
+</main>
+
+<!-- Script menú -->
+<script>
+  function toggleSidebar() {
+    document.querySelector('.sidebar').classList.toggle('active');
+    document.querySelector('.overlay').classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
