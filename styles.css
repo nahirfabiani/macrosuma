@@ -1,1150 +1,1272 @@
-
-    /* ===== ESTILOS GENERALES ===== */
-    body {
-      font-family: "Roboto", sans-serif;
-      margin: 0;
-    }
-
-    h1 {
-      padding: 8px;
-      background: rgba(4, 27, 58, 0.397);
-      border-radius: 8px;
-      margin: 0;
-      font-size: 64px;
-      font-family: "Roboto Slab", serif;
-    }
-
-    h2 {
-      font-size: 2rem;
-      text-align: left;
-      padding-left: 20px;
-      width: 75%;
-    }
-
-    p {
-      line-height: 1.6;
-      font-size: 1rem;
-      text-align: left;
-      max-width: 90%;
-      margin: 0 auto 15px auto;
-      padding: 0 10px;
-    }
-em {
-      font-style: italic;
-      color:#ddd
+/* ===== ESTILOS GENERALES ===== */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
 }
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* ===== ESTRUCTURA PRINCIPAL ===== */
-    main {
-      margin-left: 150px;
-      width: calc(100% - 150px);
-      box-sizing: border-box;
-      min-height: calc(100vh - 200px);
-    }
-
-    /* ===== BARRA DE NAVEGACIÓN ===== */
-    nav {
-      height: 72px;
-      background: #202125;
-      width: calc(100% - 150px);
-      position: fixed;
-      font-family: "Roboto Condensed", sans-serif;
-      font-size: 20px;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 16px 0 0;
-      box-sizing: border-box;
-      z-index: 100;
-      left: 150px;
-    }
-
-    nav a {
-      padding: 0 32px;
-      color: #eee;
-      transition: 0.4s;
-    }
-
-    nav a:hover {
-      text-decoration: none;
-      color: #041B3A;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      justify-content: space-around;
-      align-items: center;
-      height: 100%;
-      margin: 0;
-    }
-
-    #logo-img {
-      display: flex;
-      height: 100%;
-      background: #202125;
-      padding: 0 32px;
-      align-items: center;
-      color: white;
-      transition: 0.4s;
-    }
-
-    #logo-img img {
-      height: 100px;
-    }
-
-    #logo-img:hover {
-      background: black;
-    }
-
-    /* ===== SIDEBAR ===== */
-    .sidebar {
-      width: 150px;
-      background-color: #222;
-      color: #555;
-      height: 100vh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      display: flex;
-      flex-direction: column;
-      padding-top: 10px;
-      z-index: 1001;
-      overflow-y: auto;
-    }
-
-    .sidebar a {
-      padding: 8px 15px;
-      text-decoration: none;
-      color: #555;
-      display: block;
-      transition: background-color 0.2s;
-      font-size: 0.85rem;
-      line-height: 1.3;
-    }
-
-    .sidebar a:hover {
-      background-color: #041B3A;
-    }
-
-    .sidebar-logo {
-      text-align: center;
-      margin-bottom: 15px;
-      padding: 0 10px;
-    }
-
-    .sidebar-logo img {
-      max-width: 60px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .hamburger,
-    .overlay {
-      display: none;
-    }
-
-    /* ===== BANNER PRINCIPAL ===== */
-    #banner {
-      height: 250px;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      background: rgba(0, 0, 0, 0.2) url("img/code.jpg");
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      background-blend-mode: overlay;
-      color: white;
-      overflow: hidden;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      box-sizing: border-box;
-    }
-
-    #banner h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      animation: fadeSlideDown 1.2s ease forwards;
-      opacity: 0;
-      padding: 5px 15px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    #banner h3 {
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 8px;
-      padding: 5px 15px;
-      font-size: 1.2rem;
-      font-weight: 300;
-      animation: fadeSlideUp 1.2s ease 0.3s forwards;
-      opacity: 0;
-      margin: 5px;
-      max-width: 90%;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    }
-
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeSlideUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ===== SECCIONES Y CONTENEDORES ===== */
-    section {
-      display: flex;
-      flex-direction: column;
-      margin: 40px 0;
-      padding: 0;
-    }
-
-    .text-content {
-      width: 100%;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-
-    .section-heading {
-      font-size: 2rem;
-      font-family: "Roboto Condensed", sans-serif;
-      border-left: 3px solid black;
-      border-right: 3px solid black;
-      transition: all 0.4s;
-      display: inline-block;
-      padding: 4px 32px;
-      margin: 40px auto;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      width: 100vw;
-    }
-
-    .section-heading:hover {
-      padding: 4px 48px;
-      background: #041B3A;
-      color: white;
-    }
-
-    /* ===== SECCIÓN SEGUROS (MODIFICADA) ===== */
-    .section-seguros {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      padding: 20px 0;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .section-seguros h2 {
-      font-size: 2rem;
-      font-family: "Roboto Condensed", sans-serif;
-      border-left: 3px solid black;
-      border-right: 3px solid black;
-      transition: all 0.4s;
-      display: inline-block;
-      padding: 4px 32px;
-      margin: 20px auto;
-      text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .section-seguros h2:hover {
-      padding: 4px 48px;
-      background: #041B3A;
-      color: white;
-    }
-    .seguros-content p {
-      max-width: 100%;
-      margin: 0 0 15px 0;
-      padding: 0;
-      text-align: left;
-      line-height: 1.6;
-    }
-
-
-    /* ===== TARJETAS (CARDS) - MODIFICADAS PARA SECTION-SEGUROS ===== */
-    .cards-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin: 20px 0;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 0 20px;
-      box-sizing: border-box;
-    }
-
-    .card {
-      flex: 0 0 calc(50% - 30px);
-      max-width: 100%;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin-bottom: 30px;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .card-image {
-      text-align: center;
-    }
-
-    .card-image img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease;
-    }
-
-    .card-image:hover img {
-      transform: scale(1.05);
-    }
-
-    .card .card-description {
-      padding: 20px;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    .card-description h3 {
-      margin-top: 0;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-      color: #222;
-      text-align: left;
-    }
-
-    .card-description p {
-      margin-bottom: 15px;
-      min-height: 60px;
-      text-align: center;
-      color: #555;
-    }
-
-    /* Contenido específico para la sección de seguros */
-    .seguros-content {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .seguros-content h2 {
-      color: #041B3A;
-      border-bottom: 2px solid #041B3A;
-      padding-bottom: 10px;
-      margin-top: 30px;
-    }
-
-    .seguros-content ul {
-      margin-left: 20px;
-      margin-bottom: 20px;
-    }
-
-    .seguros-content li {
-      margin-bottom: 10px;
-      line-height: 1.6;
-    }
-
-    /* ===== BOTONES ===== */
-    .btn-readmore {
-      padding: 10px 24px;
-      border: 2px solid #041B3A;
-      transition: all 0.3s ease;
-      display: inline-block;
-      margin: 0 auto 20px;
-      font-weight: bold;
-      cursor: pointer;
-      background: white;
-      text-align: center;
-      color: #041B3A;
-      border-radius: 4px;
-      text-decoration: none;
-    }
-
-    .btn-readmore:hover {
-      background: #041B3A;
-      text-decoration: none;
-      color: white;
-      padding: 10px 32px;
-    }
-
-    .btn-contratar,
-    .btn-volver {
-      display: inline-block;
-      padding: 12px 28px;
-      border-radius: 6px;
-      background: #041B3A;
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      border: none;
-      transition: background 0.3s;
-      margin: 15px 10px;
-      font-size: 1rem;
-    }
-
-    .btn-volver {
-      background: #333;
-    }
-
-    .btn-contratar:hover,
-    .btn-volver:hover {
-      background: #007bff;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 20px 0;
-    }
-
-    /* ===== CARRUSELES ===== */
-    .carousel-container {
-      position: relative;
-      width: 50%;
-      max-width: 700px;
-      margin: 40px auto;
-      overflow: hidden;
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
-    }
-
-    .carousel-slide {
-      display: flex;
-      transition: transform 0.7s cubic-bezier(.77, 0, .18, 1);
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      flex-shrink: 0;
-      object-fit: contain;
-    }
-
-    .carousel-indicators {
-      position: absolute;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%); 
-      display: flex;
-      gap: 10px;
-    }
-
-    .indicator {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: #ddd;
-      cursor: pointer;
-      transition: background 0.3s;
-      border: 2px solid #fff;
-    }
-
-    .indicator.active {
-      background: #007bff;
-      box-shadow: 0 0 8px #007bff88;
-    }
-
-    .carousel-item {
-      position: relative;
-      flex-shrink: 0;
-      width: 100%;
-    }
-
-    .carousel-item img {
-      width: 100%;
-      object-fit: cover;
-      height: 300px;
-      border-radius: 18px;
-    }
-
-    .carousel-caption {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    }
-
-    .carousel-caption h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.3rem;
-      text-align: left;
-    }
-
-    .carousel-caption p {
-      font-size: 1rem;
-      opacity: 0.9;
-      text-align: left;
-    }
-
-    .carousel-container.logos-carousel {
-      max-width: 900px;
-      height: 150px;
-      margin: 20px auto;
-    }
-
-    .carousel-container.logos-carousel .carousel-item img {
-      height: 120px;
-      object-fit: contain;
-      padding: 15px;
-      background: white;
-      border-radius: 8px;
-    }
-
-    .carousel-container.logos-carousel .carousel-indicators {
-      bottom: 5px;
-    }
-
-    /* ===== FORMULARIO DE CONTACTO ===== */
-    #contact-section {
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 24px;
-      background: #f9f9f9;
-      border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    }
-
-    .contact-form {
-      width: 100%;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-
-    input,
-    textarea {
-      height: 32px;
-      padding: 0 16px;
-      font-family: "Roboto Condensed", sans-serif;
-      font-size: 20px;
-      border: none;
-      box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
-    }
-
-    input:focus,
-    textarea:focus {
-      outline: none;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 7px;
-      font-size: 1rem;
-    }
-
-    .contact-form button {
-      background: #041B3A;
-      color: #fff;
-      border: none;
-      padding: 12px;
-      border-radius: 7px;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-
-    .contact-form button:hover {
-      background: #007bff;
-    }
-
-    /* ===== FOOTER ===== */
-    .custom-footer {
-      width: 100%; 
-      background: #222;
-      color: #fff;
-      padding: 30px 0 10px 0;
-      margin-top: 40px;
-      box-sizing: border-box;
-      position: flex;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    .footer-social {
-      margin-bottom: 10px;
-    }
-
-    .footer-social a {
-      color: #fff;
-      font-size: 2rem;
-      margin: 0 10px;
-      transition: color 0.2s;
-      text-decoration: none;
-    }
-
-    .footer-social a:hover {
-      color: #00bcd4;
-    }
-
-    .footer-mail {
-      font-size: 1rem;
-      margin-top: 10px;
-    }
-
-    /* ===== MEDIA QUERIES ORGANIZADAS ===== */
-
-    /* Desktop Grande (1200px+) - 4 cards por fila */
-    @media (min-width: 1200px) {
-      #banner {
-        height: 220px;
-      }
-      
-      #banner h1 {
-        font-size: 2.2rem;
-      }
-      
-      #banner h3 {
-        font-size: 1.1rem;
-      }
-      
-      .card {
-        flex: 0 0 calc(25% - 30px);
-      }
-      
-      .section-seguros h2 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Desktop (1024px - 1199px) - 3 cards por fila */
-    @media (min-width: 1024px) and (max-width: 1199px) {
-      #banner {
-        height: 200px;
-      }
-      
-      #banner h1 {
-        font-size: 2rem;
-      }
-      
-      #banner h3 {
-        font-size: 1rem;
-      }
-      
-      h2, .section-heading {
-        font-size: 1.7rem;
-      }
-      
-      .card {
-        flex: 0 0 calc(33.333% - 30px);
-      }
-      
-      .carousel-container {
-        max-width: 600px;
-      }
-      
-      .carousel-item img {
-        height: 260px;
-      }
-      
-      .carousel-caption h3 {
-        font-size: 1.3rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.9rem;
-      }
-      
-      .carousel-container.logos-carousel {
-        max-width: 800px;
-        height: 140px;
-      }
-      
-      .carousel-container.logos-carousel .carousel-item img {
-        height: 110px;
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.7rem;
-      }
-    }
-
-    /* Tablet (900px - 1023px) */
-    @media (min-width: 900px) and (max-width: 1023px) {
-      #banner {
-        height: 180px;
-      }
-      
-      #banner h1 {
-        font-size: 1.8rem;
-      }
-      
-      h2, .section-heading {
-        font-size: 1.6rem;
-      }
-      
-      .carousel-container {
-        max-width: 550px;
-      }
-      
-      .carousel-item img {
-        height: 240px;
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.6rem;
-      }
-    }
-
-    /* Tablet Pequeña (768px - 899px) - 2 cards por fila */
-    @media (min-width: 768px) and (max-width: 899px) {
-      .card {
-        flex: 0 0 calc(50% - 30px);
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.6rem;
-        padding: 4px 20px;
-      }
-      
-      .section-seguros h2:hover {
-        padding: 4px 30px;
-      }
-    }
-
-    /* Móviles (menos de 768px) - 1 card por fila */
-    @media (max-width: 767px) {
-      .sidebar {
-        width: 150px;
-      }
-      
-      main {
-        margin-left: 150px;
-        width: calc(100% - 150px);
-      }
-      
-      nav {
-        left: 150px;
-        width: calc(100% - 150px);
-      }
-      
-      #banner {
-        height: 160px;
-      }
-      
-      #banner h1 {
-        font-size: 1.6rem;
-      }
-      
-      #banner h3 {
-        font-size: 0.9rem;
-      }
-      
-      h2, .section-heading {
-        font-size: 1.5rem;
-      }
-      
-      .cards-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-      }
-      
-      .card {
-        flex: 0 0 100%;
-        margin-bottom: 15px;
-      }
-      
-      .card-description h3 {
-        font-size: 1.3rem;
-      }
-      
-      .card-description p {
-        font-size: 0.9rem;
-        min-height: 50px;
-      }
-      
-      .carousel-container {
-        max-width: 500px;
-      }
-      
-      .carousel-item img {
-        height: 220px;
-      }
-      
-      .carousel-caption h3 {
-        font-size: 1.2rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.85rem;
-      }
-      
-      .carousel-container.logos-carousel {
-        height: 120px;
-        max-width: 700px;
-      }
-      
-      .carousel-container.logos-carousel .carousel-item img {
-        height: 90px;
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.5rem;
-        padding: 4px 15px;
-        margin: 15px auto;
-      }
-      
-      .section-seguros h2:hover {
-        padding: 4px 20px;
-      }
-      
-      .btn-contratar, .btn-volver {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-      }
-    }
-
-    /* Móvil Grande (600px - 767px) */
-    @media (max-width: 600px) {
-      .sidebar {
-        width: 120px;
-      }
-      
-      main {
-        margin-left: 120px;
-        width: calc(100% - 120px);
-      }
-      
-      nav {
-        left: 120px;
-        width: calc(100% - 120px);
-      }
-      
-      #banner {
-        height: 140px;
-      }
-      
-      #banner h1 {
-        font-size: 1.4rem;
-      }
-      
-      #banner h3 {
-        font-size: 0.8rem;
-      }
-      
-      h2, .section-heading {
-        font-size: 1.4rem;
-      }
-      
-      .carousel-container {
-        max-width: 400px;
-        width: 100%;
-      }
-      
-      .carousel-item img {
-        height: 180px;
-      }
-      
-      .carousel-caption h3 {
-        font-size: 1.1rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.8rem;
-      }
-      
-      .carousel-container.logos-carousel {
-        height: 100px;
-        max-width: 500px;
-      }
-      
-      .carousel-container.logos-carousel .carousel-item img {
-        height: 80px;
-      }
-      
-      #contact-section {
-        margin: 20px auto;
-        padding: 15px;
-      }
-      
-      .sidebar a {
-        padding: 6px 10px;
-        font-size: 0.75rem;
-      }
-      
-      .sidebar-logo img {
-        max-width: 50px;
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.4rem;
-        padding: 4px 12px;
-      }
-      
-      .section-seguros h2:hover {
-        padding: 4px 16px;
-      }
-    }
-
-    /* Móvil Mediano (480px - 599px) */
-    @media (max-width: 480px) {
-      .sidebar {
-        width: 100px;
-      }
-      
-      main {
-        margin-left: 100px;
-        width: calc(100% - 100px);
-      }
-      
-      nav {
-        left: 100px;
-        width: calc(100% - 100px);
-        padding: 0 8px 0 0;
-      }
-      
-      nav a {
-        padding: 0 16px;
-        font-size: 16px;
-      }
-      
-      #logo-img {
-        padding: 0 16px;
-      }
-      
-      #logo-img img {
-        height: 80px;
-      }
-      
-      #banner {
-        height: 120px;
-      }
-      
-      #banner h1 {
-        font-size: 1.2rem;
-      }
-      
-      #banner h3 {
-        font-size: 0.75rem;
-      }
-      
-      h2, .section-heading {
-        font-size: 1.2rem;
-      }
-      
-      .card {
-        max-width: 100%;
-        margin: 0 10px 15px 10px;
-      }
-      
-      .card-description {
-        padding: 15px;
-      }
-      
-      .card-description h3 {
-        font-size: 1.2rem;
-      }
-      
-      .card-description p {
-        font-size: 0.85rem;
-        min-height: auto;
-      }
-      
-      .btn-readmore {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-      }
-      
-      .carousel-container {
-        max-width: 320px;
-      }
-      
-      .carousel-item img {
-        height: 150px;
-      }
-      
-      .carousel-caption h3 {
-        font-size: 1rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.75rem;
-      }
-      
-      .carousel-container.logos-carousel {
-        height: 90px;
-        max-width: 400px;
-      }
-      
-      .carousel-container.logos-carousel .carousel-item img {
-        height: 70px;
-      }
-      
-      .sidebar a {
-        padding: 5px 8px;
-        font-size: 0.7rem;
-      }
-      
-      .sidebar-logo {
-        margin-bottom: 10px;
-      }
-      
-      .sidebar-logo img {
-        max-width: 40px;
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.2rem;
-        padding: 4px 10px;
-        margin: 10px auto;
-      }
-      
-      .section-seguros h2:hover {
-        padding: 4px 14px;
-      }
-      
-      .btn-contratar, .btn-volver {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-        margin: 10px 5px;
-      }
-    }
-
-    /* Móvil Pequeño (menos de 360px) */
-    @media (max-width: 360px) {
-      .sidebar {
-        width: 90px;
-      }
-      
-      main {
-        margin-left: 90px;
-        width: calc(100% - 90px);
-      }
-      
-      nav {
-        left: 90px;
-        width: calc(100% - 90px);
-        height: 60px;
-      }
-      
-      nav a {
-        padding: 0 12px;
-        font-size: 14px;
-      }
-      
-      #logo-img {
-        padding: 0 12px;
-      }
-      
-      #logo-img img {
-        height: 70px;
-      }
-      
-      #banner {
-        height: 110px;
-      }
-      
-      #banner h1 {
-        font-size: 1.1rem;
-        padding: 4px 10px;
-      }
-      
-      #banner h3 {
-        font-size: 0.7rem;
-        padding: 3px 10px;
-      }
-      
-      h2, .section-heading {
-        font-size: 1.1rem;
-      }
-      
-      .carousel-container {
-        max-width: 280px;
-      }
-      
-      .carousel-item img {
-        height: 130px;
-      }
-      
-      .carousel-caption h3 {
-        font-size: 0.9rem;
-      }
-      
-      .carousel-caption p {
-        font-size: 0.7rem;
-      }
-      
-      .footer-social a {
-        font-size: 1.5rem;
-      }
-      
-      /* Ajustes finales para el sidebar */
-      .sidebar a {
-        padding: 4px 6px;
-        font-size: 0.65rem;
-      }
-      
-      .sidebar-logo img {
-        max-width: 35px;
-      }
-      
-      .section-seguros h2 {
-        font-size: 1.1rem;
-        padding: 3px 8px;
-      }
-      
-      .section-seguros h2:hover {
-        padding: 3px 12px;
-      }
-      
-      .btn-contratar, .btn-volver {
-        padding: 7px 14px;
-        font-size: 0.8rem;
-        margin: 8px 4px;
-      }
-    }
+
+h1 {
+  padding: 8px;
+  background: rgba(4, 27, 58, 0.397);
+  border-radius: 8px;
+  margin: 0;
+  font-size: 64px;
+  font-family: "Roboto Slab", serif;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: left;
+  padding-left: 20px;
+  width: 75%;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
+  max-width: 90%;
+  margin: 0 auto 15px auto;
+  padding: 0 10px;
+}
+
+em {
+  font-style: italic;
+  color: #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+main {
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  box-sizing: border-box;
+  min-height: calc(100vh - 200px);
+}
+
+/* ===== BARRA DE NAVEGACIÓN ===== */
+nav {
+  height: 72px;
+  background: #202125;
+  width: calc(100% - 150px);
+  position: fixed;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px 0 0;
+  box-sizing: border-box;
+  z-index: 100;
+  left: 150px;
+}
+
+nav a {
+  padding: 0 32px;
+  color: #eee;
+  transition: 0.4s;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #041B3A;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+#logo-img {
+  display: flex;
+  height: 100%;
+  background: #202125;
+  padding: 0 32px;
+  align-items: center;
+  color: white;
+  transition: 0.4s;
+}
+
+#logo-img img {
+  height: 100px;
+}
+
+#logo-img:hover {
+  background: black;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 150px;
+  background-color: #222;
+  color: #555;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.sidebar a {
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #555;
+  display: block;
+  transition: background-color 0.2s;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.sidebar a:hover {
+  background-color: #041B3A;
+}
+
+.sidebar-logo {
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.sidebar-logo img {
+  max-width: 60px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.hamburger,
+.overlay {
+  display: none;
+}
+
+/* ===== BANNER PRINCIPAL ===== */
+#banner {
+  height: 250px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.2) url("img/code.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: white;
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-sizing: border-box;
+}
+
+#banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  animation: fadeSlideDown 1.2s ease forwards;
+  opacity: 0;
+  padding: 5px 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#banner h3 {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  animation: fadeSlideUp 1.2s ease 0.3s forwards;
+  opacity: 0;
+  margin: 5px;
+  max-width: 90%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== SECCIONES Y CONTENEDORES ===== */
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0;
+  padding: 0;
+}
+
+.text-content {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-family: "Roboto Condensed", sans-serif;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  transition: all 0.4s;
+  display: inline-block;
+  padding: 4px 32px;
+  margin: 40px auto;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+.section-heading:hover {
+  padding: 4px 48px;
+  background: #041B3A;
+  color: white;
+}
+
+/* ===== SECCIÓN SEGUROS (MODIFICADA) ===== */
+.section-seguros {
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.section-seguros h2 {
+  font-size: 2rem;
+  font-family: "Roboto Condensed", sans-serif;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  transition: all 0.4s;
+  display: inline-block;
+  padding: 4px 32px;
+  margin: 20px auto;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-seguros h2:hover {
+  padding: 4px 48px;
+  background: #041B3A;
+  color: white;
+}
+
+.seguros-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.seguros-content p {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 0 15px 0;
+  padding: 0 10px; 
+  text-align: center;
+  line-height: 1.6;
+  box-sizing: border-box;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+/* ===== TARJETAS (CARDS) - MODIFICADAS PARA SECTION-SEGUROS ===== */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.card {
+  flex: 0 0 calc(50% - 30px);
+  max-width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+  text-align: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover img {
+  transform: scale(1.05);
+}
+
+.card .card-description {
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card-description h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #222;
+  text-align: left;
+}
+
+.card-description p {
+  margin-bottom: 15px;
+  min-height: 60px;
+  text-align: center;
+  color: #555;
+}
+
+/* Contenido específico para la sección de seguros */
+.seguros-content h2 {
+  color: #041B3A;
+  border-bottom: 2px solid #041B3A;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+.seguros-content ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.seguros-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* ===== BOTONES ===== */
+.btn-readmore {
+  padding: 10px 24px;
+  border: 2px solid #041B3A;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 0 auto 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+  text-align: center;
+  color: #041B3A;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-readmore:hover {
+  background: #041B3A;
+  text-decoration: none;
+  color: white;
+  padding: 10px 32px;
+}
+
+.btn-contratar,
+.btn-volver {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 6px;
+  background: #041B3A;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  transition: background 0.3s;
+  margin: 15px 10px;
+  font-size: 1rem;
+}
+
+.btn-volver {
+  background: #333;
+}
+
+.btn-contratar:hover,
+.btn-volver:hover {
+  background: #007bff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+/* ===== CARRUSELES ===== */
+.carousel-mala-praxis .carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.carousel-mala-praxis .carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-mala-praxis .card {
+  flex: 0 0 250px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-mala-praxis .card img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(4, 27, 58, 0.8);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: rgba(4, 27, 58, 1);
+}
+
+.carousel-btn.prev {
+  left: 0px;
+}
+
+.carousel-btn.next {
+  right: 0px;
+}
+
+.card {
+  flex: 0 0 300px; /* Ancho fijo por tarjeta */
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .carousel-mala-praxis .card {
+    flex: 0 0 200px;
+  }
+}
+
+/* ===== CARRUSEL OTROS SEGUROS - ESTILOS MEJORADOS ===== */
+.carousel-otros-seguros .carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 0 50px;
+  box-sizing: border-box;
+}
+
+.carousel-otros-seguros .carousel-slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px;
+}
+
+.carousel-otros-seguros .carousel-item {
+  flex: 0 0 calc(33.333% - 20px); /* 3 items visibles por defecto */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.carousel-otros-seguros .carousel-item:hover {
+  transform: translateY(-5px);
+}
+
+.carousel-otros-seguros .carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-otros-seguros .carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.carousel-otros-seguros .carousel-caption h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+
+.carousel-otros-seguros .carousel-caption p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.carousel-otros-seguros .carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.carousel-otros-seguros .indicator {
+  width: 12px;
+  height: 12px;
+  background: rgba(4, 27, 58, 0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-otros-seguros .indicator.active {
+  background: rgba(4, 27, 58, 0.9);
+}
+
+/* Responsive para el carrusel de otros seguros */
+@media (max-width: 1024px) {
+  .carousel-otros-seguros .carousel-item {
+    flex: 0 0 calc(50% - 20px); /* 2 items en tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-otros-seguros .carousel-item {
+    flex: 0 0 100%; /* 1 item en móviles */
+  }
+  
+  .carousel-otros-seguros .carousel-container {
+    padding: 0 40px;
+  }
+}
+
+.carousel-logos .carousel-container {
+  overflow: hidden;
+}
+
+.carousel-logos .carousel-slide {
+  display: flex;
+  gap: 30px;
+  animation: scroll-logos 20s linear infinite;
+}
+
+.carousel-logos img {
+  height: 60px;
+  object-fit: contain;
+}
+
+@keyframes scroll-logos {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .carousel-logos img {
+    height: 40px;
+  }
+}
+
+/* ===== FORMULARIO DE CONTACTO ===== */
+#contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.contact-form {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+input,
+textarea {
+  height: 32px;
+  padding: 0 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  border: none;
+  box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #041B3A;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: #007bff;
+}
+
+/* ===== FOOTER ===== */
+.custom-footer {
+  width: 100%; 
+  background: #222;
+  color: #fff;
+  padding: 30px 0 10px 0;
+  margin-top: 40px;
+  box-sizing: border-box;
+  position: flex;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.footer-social {
+  margin-bottom: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0 10px;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #00bcd4;
+}
+
+.footer-mail {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* ===== MEDIA QUERIES ORGANIZADAS ===== */
+
+/* Desktop Grande (1200px+) - 4 cards por fila */
+@media (min-width: 1200px) {
+  #banner {
+    height: 220px;
+  }
+  
+  #banner h1 {
+    font-size: 2.2rem;
+  }
+  
+  #banner h3 {
+    font-size: 1.1rem;
+  }
+  
+  .card {
+    flex: 0 0 calc(25% - 30px);
+  }
+  
+  .section-seguros h2 {
+    font-size: 2rem;
+  }
+  
+  .seguros-content {
+    max-width: 1100px;
+  }
+}
+
+/* Desktop (1024px - 1199px) - 3 cards por fila */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  #banner {
+    height: 200px;
+  }
+  
+  #banner h1 {
+    font-size: 2rem;
+  }
+  
+  #banner h3 {
+    font-size: 1rem;
+  }
+  
+  h2, .section-heading {
+    font-size: 1.7rem;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.333% - 30px);
+  }
+  
+  .carousel-container {
+    max-width: 600px;
+  }
+  
+  .carousel-item img {
+    height: 260px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.3rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  
+  .carousel-container.logos-carousel {
+    max-width: 800px;
+    height: 140px;
+  }
+  
+  .carousel-container.logos-carousel .carousel-item img {
+    height: 110px;
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.7rem;
+  }
+  
+  .seguros-content {
+    max-width: 1000px;
+  }
+}
+
+/* Tablet (900px - 1023px) */
+@media (min-width: 900px) and (max-width: 1023px) {
+  #banner {
+    height: 180px;
+  }
+  
+  #banner h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2, .section-heading {
+    font-size: 1.6rem;
+  }
+  
+  .carousel-container {
+    max-width: 550px;
+  }
+  
+  .carousel-item img {
+    height: 240px;
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.6rem;
+  }
+  
+  .seguros-content {
+    max-width: 850px;
+  }
+}
+
+/* Tablet Pequeña (768px - 899px) - 2 cards por fila */
+@media (min-width: 768px) and (max-width: 899px) {
+  .card {
+    flex: 0 0 calc(50% - 30px);
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.6rem;
+    padding: 4px 20px;
+  }
+  
+  .section-seguros h2:hover {
+    padding: 4px 30px;
+  }
+  
+  .seguros-content {
+    max-width: 700px;
+  }
+}
+
+/* Móviles (menos de 768px) - 1 card por fila */
+@media (max-width: 767px) {
+  .sidebar {
+    width: 150px;
+  }
+  
+  main {
+    margin-left: 150px;
+    width: calc(100% - 150px);
+  }
+  
+  nav {
+    left: 150px;
+    width: calc(100% - 150px);
+  }
+  
+  #banner {
+    height: 160px;
+  }
+  
+  #banner h1 {
+    font-size: 1.6rem;
+  }
+  
+  #banner h3 {
+    font-size: 0.9rem;
+  }
+  
+  h2, .section-heading {
+    font-size: 1.5rem;
+  }
+  
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .card {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+  
+  .card-description h3 {
+    font-size: 1.3rem;
+  }
+  
+  .card-description p {
+    font-size: 0.9rem;
+    min-height: 50px;
+  }
+  
+  .carousel-container {
+    max-width: 500px;
+  }
+  
+  .carousel-item img {
+    height: 220px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+  
+  .carousel-container.logos-carousel {
+    height: 120px;
+    max-width: 700px;
+  }
+  
+  .carousel-container.logos-carousel .carousel-item img {
+    height: 90px;
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.5rem;
+    padding: 4px 15px;
+    margin: 15px auto;
+  }
+  
+  .section-seguros h2:hover {
+    padding: 4px 20px;
+  }
+  
+  .btn-contratar, .btn-volver {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .seguros-content {
+    max-width: 600px;
+    padding: 15px;
+  }
+}
+
+/* Móvil Grande (600px - 767px) */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 120px;
+  }
+  
+  main {
+    margin-left: 120px;
+    width: calc(100% - 120px);
+  }
+  
+  nav {
+    left: 120px;
+    width: calc(100% - 120px);
+  }
+  
+  #banner {
+    height: 140px;
+  }
+  
+  #banner h1 {
+    font-size: 1.4rem;
+  }
+  
+  #banner h3 {
+    font-size: 0.8rem;
+  }
+  
+  h2, .section-heading {
+    font-size: 1.4rem;
+  }
+  
+  .carousel-container {
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .carousel-item img {
+    height: 180px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+  
+  .carousel-container.logos-carousel {
+    height: 100px;
+    max-width: 500px;
+  }
+  
+  .carousel-container.logos-carousel .carousel-item img {
+    height: 80px;
+  }
+  
+  #contact-section {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .sidebar a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .sidebar-logo img {
+    max-width: 50px;
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.4rem;
+    padding: 4px 12px;
+  }
+  
+  .section-seguros h2:hover {
+    padding: 4px 16px;
+  }
+  
+  .seguros-content {
+    max-width: 100%;
+  }
+}
+
+/* Móvil Mediano (480px - 599px) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100px;
+  }
+  
+  main {
+    margin-left: 100px;
+    width: calc(100% - 100px);
+  }
+  
+  nav {
+    left: 100px;
+    width: calc(100% - 100px);
+    padding: 0 8px 0 0;
+  }
+  
+  nav a {
+    padding: 0 16px;
+    font-size: 16px;
+  }
+  
+  #logo-img {
+    padding: 0 16px;
+  }
+  
+  #logo-img img {
+    height: 80px;
+  }
+  
+  #banner {
+    height: 120px;
+  }
+  
+  #banner h1 {
+    font-size: 1.2rem;
+  }
+  
+  #banner h3 {
+    font-size: 0.75rem;
+  }
+  
+  h2, .section-heading {
+    font-size: 1.2rem;
+  }
+  
+  .card {
+    max-width: 100%;
+    margin: 0 10px 15px 10px;
+  }
+  
+  .card-description {
+    padding: 15px;
+  }
+  
+  .card-description h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-description p {
+    font-size: 0.85rem;
+    min-height: auto;
+  }
+  
+  .btn-readmore {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .carousel-container {
+    max-width: 320px;
+  }
+  
+  .carousel-item img {
+    height: 150px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.75rem;
+  }
+  
+  .carousel-container.logos-carousel {
+    height: 90px;
+    max-width: 400px;
+  }
+  
+  .carousel-container.logos-carousel .carousel-item img {
+    height: 70px;
+  }
+  
+  .sidebar a {
+    padding: 5px 8px;
+    font-size: 0.7rem;
+  }
+  
+  .sidebar-logo {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-logo img {
+    max-width: 40px;
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.2rem;
+    padding: 4px 10px;
+    margin: 10px auto;
+  }
+  
+  .section-seguros h2:hover {
+    padding: 4px 14px;
+  }
+  
+  .btn-contratar, .btn-volver {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin: 10px 5px;
+  }
+}
+
+/* Móvil Pequeño (menos de 360px) */
+@media (max-width: 360px) {
+  .sidebar {
+    width: 90px;
+  }
+  
+  main {
+    margin-left: 90px;
+    width: calc(100% - 90px);
+  }
+  
+  nav {
+    left: 90px;
+    width: calc(100% - 90px);
+    height: 60px;
+  }
+  
+  nav a {
+    padding: 0 12px;
+    font-size: 14px;
+  }
+  
+  #logo-img {
+    padding: 0 12px;
+  }
+  
+  #logo-img img {
+    height: 70px;
+  }
+  
+  #banner {
+    height: 110px;
+  }
+  
+  #banner h1 {
+    font-size: 1.1rem;
+    padding: 4px 10px;
+  }
+  
+  #banner h3 {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+  
+  h2, .section-heading {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-container {
+    max-width: 280px;
+  }
+  
+  .carousel-item img {
+    height: 130px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 0.9rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.7rem;
+  }
+  
+  .footer-social a {
+    font-size: 1.5rem;
+  }
+  
+  /* Ajustes finales para el sidebar */
+  .sidebar a {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+  }
+  
+  .sidebar-logo img {
+    max-width: 35px;
+  }
+  
+  .section-seguros h2 {
+    font-size: 1.1rem;
+    padding: 3px 8px;
+  }
+  
+  .section-seguros h2:hover {
+    padding: 3px 12px;
+  }
+  
+  .btn-contratar, .btn-volver {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+    margin: 8px 4px;
+  }
+}
